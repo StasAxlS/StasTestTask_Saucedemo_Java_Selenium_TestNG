@@ -40,7 +40,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.35.0</version>
+            <version>4.46.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -75,7 +75,6 @@
                         -Dfile.encoding=${project.build.sourceEncoding}
                         -javaagent:"${user.home}/.m2/repository/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                         -Dorg.aspectj.weaver.showWeaveInfo=true
-                        -Dallure.results.directory=${project.build.directory}/allure-results
                     </argLine>
                 </configuration>
                 <dependencies>
