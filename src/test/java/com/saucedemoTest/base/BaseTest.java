@@ -61,6 +61,15 @@ public abstract class BaseTest {
         }
     }
 
+    protected void openBaseUrl() {
+        String baseUrl = ConfigReader.get("base.url" + "/");
+        if (baseUrl != null) {
+            getDriver().get(baseUrl);
+        } else {
+            throw new RuntimeException("Критическая ошибка: 'base.url' не задан в config.properties!");
+        }
+    }
+
     @BeforeMethod
     public void setUp() {
         String browser = System.getProperty("browser");
@@ -76,6 +85,8 @@ public abstract class BaseTest {
         WebDriver driver = createDriverInstance(browser);
         configureWindowSize(driver);
         driverThreadLocal.set(driver);
+
+        openBaseUrl();
     }
 
     @AfterMethod

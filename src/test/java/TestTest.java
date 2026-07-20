@@ -21,13 +21,13 @@ public class TestTest {
     public void testTest() {
         WebDriver driver = new ChromeDriver();
         try {
-            driver.get("https://www.selenium.dev/selenium/web/web-form.html"); // ← исправлено
+            driver.get("https://www.selenium.dev/selenium/web/web-form.html");
             driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
             WebElement message = driver.findElement(By.className("display-6"));
             verifyPageTitle(message);
         } catch (Exception e) {
-            e.printStackTrace(); // ← добавьте это
-            throw e; // ← и это, чтобы тест упал явно
+            e.printStackTrace();
+            throw e;
         } finally {
             driver.quit();
         }
