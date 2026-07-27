@@ -11,7 +11,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.saucedemoTest.utils.ConfigReader;
 
-@Listeners({AllureTestNg.class})
 public class NavigationTest extends BaseTest {
 
     @Test(description = "TC-01 Open Base URL")
