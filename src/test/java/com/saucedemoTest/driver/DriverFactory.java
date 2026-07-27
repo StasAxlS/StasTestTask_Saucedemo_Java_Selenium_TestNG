@@ -9,8 +9,9 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-public final  class DriverFactory {
-    private DriverFactory() {}
+public final class DriverFactory {
+    private DriverFactory() {
+    }
 
     public static WebDriver createDriver(String browserName) {
         boolean headless = ConfigReader.getBoolean("headless");

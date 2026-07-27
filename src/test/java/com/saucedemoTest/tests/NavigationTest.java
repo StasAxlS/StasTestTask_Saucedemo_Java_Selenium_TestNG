@@ -2,14 +2,12 @@ package com.saucedemoTest.tests;
 
 import com.saucedemoTest.base.BaseTest;
 import com.saucedemoTest.data.TestData;
+import com.saucedemoTest.utils.ConfigReader;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import com.saucedemoTest.utils.ConfigReader;
 
 public class NavigationTest extends BaseTest {
 

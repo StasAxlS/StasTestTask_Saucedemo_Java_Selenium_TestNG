@@ -1,17 +1,10 @@
 package com.saucedemoTest.base;
 
 import com.saucedemoTest.driver.DriverManager;
-import org.openqa.selenium.Dimension;
+import com.saucedemoTest.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import com.saucedemoTest.utils.ConfigReader;
 
 public abstract class BaseTest {
 
