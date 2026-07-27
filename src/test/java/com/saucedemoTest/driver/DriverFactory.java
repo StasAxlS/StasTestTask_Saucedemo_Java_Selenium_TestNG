@@ -8,13 +8,18 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public final class DriverFactory {
     private DriverFactory() {
     }
 
+    private static final Logger log = LoggerFactory.getLogger(DriverFactory.class);
+
     public static WebDriver createDriver(String browserName) {
         boolean headless = ConfigReader.getBoolean("headless");
+        log.info("Создаю драйвер: browser={}, headless={}", browserName, headless);
 
         return switch (browserName.toLowerCase()) {
             case "firefox" -> {

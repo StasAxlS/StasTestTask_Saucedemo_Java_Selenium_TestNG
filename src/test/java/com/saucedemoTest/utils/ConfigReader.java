@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class ConfigReader {
+public final class ConfigReader {
 
     private static final Logger log = LoggerFactory.getLogger(ConfigReader.class) ;
     private static final Properties properties = new Properties();
