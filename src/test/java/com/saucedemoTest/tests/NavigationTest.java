@@ -9,7 +9,7 @@ import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import utils.ConfigReader;
+import com.saucedemoTest.utils.ConfigReader;
 
 @Listeners({AllureTestNg.class})
 public class NavigationTest extends BaseTest {
@@ -18,7 +18,7 @@ public class NavigationTest extends BaseTest {
     @Severity(SeverityLevel.BLOCKER)
     @Story("Navigation")
     public void testOpenBaseURL() {
-        String expectedURL = ConfigReader.get("base.url");
+        String expectedURL = ConfigReader.get("base.url") + "/";
         String expectedTitle = TestData.BASE_URL_TITLE;
 
         final String actualURL = getDriver().getCurrentUrl();

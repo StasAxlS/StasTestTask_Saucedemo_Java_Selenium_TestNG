@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import utils.ConfigReader;
+import com.saucedemoTest.utils.ConfigReader;
 
 public abstract class BaseTest {
 
@@ -62,7 +62,7 @@ public abstract class BaseTest {
     }
 
     protected void openBaseUrl() {
-        String baseUrl = ConfigReader.get("base.url" + "/");
+        String baseUrl = ConfigReader.get("base.url") + "/";
         if (baseUrl != null) {
             getDriver().get(baseUrl);
         } else {
