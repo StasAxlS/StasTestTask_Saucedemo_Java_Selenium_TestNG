@@ -1,8 +1,8 @@
-package com.saucedemoTest.tests;
+package com.saucedemo.test.tests;
 
-import com.saucedemoTest.base.BaseTest;
-import com.saucedemoTest.data.TestData;
-import com.saucedemoTest.utils.ConfigReader;
+import com.saucedemo.test.base.BaseTest;
+import com.saucedemo.test.data.TestData;
+import com.saucedemo.test.utils.ConfigReader;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;

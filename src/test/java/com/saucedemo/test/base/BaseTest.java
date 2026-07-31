@@ -1,7 +1,7 @@
-package com.saucedemoTest.base;
+package com.saucedemo.test.base;
 
-import com.saucedemoTest.driver.DriverManager;
-import com.saucedemoTest.utils.ConfigReader;
+import com.saucedemo.test.driver.DriverManager;
+import com.saucedemo.test.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

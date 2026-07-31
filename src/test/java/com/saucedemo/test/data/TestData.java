@@ -1,4 +1,4 @@
-package com.saucedemoTest.data;
+package com.saucedemo.test.data;
 
 public class TestData {
 

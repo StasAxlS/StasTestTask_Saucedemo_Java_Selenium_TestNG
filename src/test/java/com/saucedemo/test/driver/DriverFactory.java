@@ -1,6 +1,6 @@
-package com.saucedemoTest.driver;
+package com.saucedemo.test.driver;
 
-import com.saucedemoTest.utils.ConfigReader;
+import com.saucedemo.test.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

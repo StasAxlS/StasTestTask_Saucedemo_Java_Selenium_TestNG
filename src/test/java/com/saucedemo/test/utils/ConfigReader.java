@@ -1,4 +1,4 @@
-package com.saucedemoTest.utils;
+package com.saucedemo.test.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
