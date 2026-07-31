@@ -21,4 +21,13 @@ public abstract class BasePage {
     protected void waitForElementVisible(By locator) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
+    protected void waitForElementVisible(By locator, long timeoutSeconds) {
+        new WebDriverWait(getDriver(), java.time.Duration.ofSeconds(timeoutSeconds))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    protected WebDriverWait waitWithTimeout(long seconds) {
+        return new WebDriverWait(getDriver(), java.time.Duration.ofSeconds(seconds));
+    }
 }

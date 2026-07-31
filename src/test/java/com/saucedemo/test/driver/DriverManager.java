@@ -13,7 +13,11 @@ public final class DriverManager {
     private DriverManager() {}
 
     public static WebDriver getDriver() {
-        return DRIVER.get();
+        WebDriver driver = DRIVER.get();
+        if (driver == null) {
+            throw new IllegalStateException("Драйвер не инициализирован. Убедитесь, что @BeforeMethod setUp() был вызван.");
+        }
+        return driver;
     }
 
     public static void setUp(String browser) {
