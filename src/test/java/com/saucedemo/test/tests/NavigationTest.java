@@ -1,0 +1,27 @@
+package com.saucedemo.test.tests;
+
+import com.saucedemo.test.base.BaseTest;
+import com.saucedemo.test.data.TestData;
+import com.saucedemo.test.utils.ConfigReader;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class NavigationTest extends BaseTest {
+
+    @Test(description = "TC-01 Open Base URL")
+    @Severity(SeverityLevel.BLOCKER)
+    @Story("Navigation")
+    public void testOpenBaseURL() {
+        String expectedURL = ConfigReader.get("base.url") + "/";
+        String expectedTitle = TestData.BASE_URL_TITLE;
+
+        final String actualURL = getDriver().getCurrentUrl();
+        final String actualTitle = getDriver().getTitle();
+
+        Assert.assertEquals(actualURL, expectedURL);
+        Assert.assertEquals(actualTitle, expectedTitle);
+    }
+}
