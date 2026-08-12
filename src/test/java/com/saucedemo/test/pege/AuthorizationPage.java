@@ -28,4 +28,9 @@ public class AuthorizationPage extends BasePage {
         return this;
     }
 
+    public ProductsPage clickLoginButton() {
+        loginButton.click();
+        return new ProductsPage();
+    }
+
 }
