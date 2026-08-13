@@ -10,7 +10,7 @@ public class ProductsPage extends BasePage {
     @FindBy(id = "add-to-cart-sauce-labs-backpack")
     private WebElement addCartLabsBackpack;
 
-    @FindBy(id = " remove-sauce-labs-backpack")
+    @FindBy(id = "remove-sauce-labs-backpack")
     private WebElement removeCartLabsBackpack;
 
     @FindBy(className = "product_sort_container")
