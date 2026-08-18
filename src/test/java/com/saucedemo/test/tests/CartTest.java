@@ -19,7 +19,7 @@ public class CartTest extends BaseTest {
     @Severity(SeverityLevel.CRITICAL)
     @Story("Shopping Cart")
     public void testAddItemsToCartAndVerify() {
-        List<String> actualItemNames = new AuthorizationPage()
+        List<String> actualItemNames = new AuthorizationPage(getDriver())
                 .enterUsername(user)
                 .enterPassword(pass)
                 .clickLoginButton()
