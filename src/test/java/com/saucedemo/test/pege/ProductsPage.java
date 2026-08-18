@@ -1,6 +1,7 @@
 package com.saucedemo.test.pege;
 
 import com.saucedemo.test.model.BasePage;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
@@ -18,6 +19,10 @@ public class ProductsPage extends BasePage {
 
     @FindBy(className = "shopping_cart_link")
     private WebElement shoppingCart;
+
+    public ProductsPage(WebDriver driver) {
+        super(driver);
+    }
 
 
     public ProductsPage clickAddCartLabsBackpackButton() {
@@ -40,7 +45,7 @@ public class ProductsPage extends BasePage {
 
     public ShoppingCartPage clickShoppingCart() {
         shoppingCart.click();
-        return new ShoppingCartPage();
+        return new ShoppingCartPage(getDriver());
     }
 
 }

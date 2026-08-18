@@ -1,6 +1,7 @@
 package com.saucedemo.test.pege;
 
 import com.saucedemo.test.model.BasePage;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +17,10 @@ public class AuthorizationPage extends BasePage {
     @FindBy(id = "login-button")
     private WebElement loginButton;
 
+    public AuthorizationPage(WebDriver driver){
+        super(driver);
+    }
+
 
     public AuthorizationPage enterUsername(String username) {
         getCustomWait(2).until(ExpectedConditions.visibilityOf(userNameInput));
@@ -30,7 +35,7 @@ public class AuthorizationPage extends BasePage {
 
     public ProductsPage clickLoginButton() {
         loginButton.click();
-        return new ProductsPage();
+        return new ProductsPage(getDriver());
     }
 
 }

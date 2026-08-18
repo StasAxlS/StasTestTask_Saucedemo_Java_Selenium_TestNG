@@ -1,6 +1,5 @@
 package com.saucedemo.test.model;
 
-import com.saucedemo.test.driver.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -9,14 +8,16 @@ import java.time.Duration;
 
 public abstract class BaseModel {
 
+    protected final WebDriver driver;
     protected final WebDriverWait wait;
 
-    public BaseModel() {
-        this.wait = new WebDriverWait(DriverManager.getDriver(), java.time.Duration.ofSeconds(10));
+    public BaseModel(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     protected WebDriver getDriver() {
-        return DriverManager.getDriver();
+        return this.driver;
     }
 
     protected WebDriverWait getCustomWait(int seconds) {
