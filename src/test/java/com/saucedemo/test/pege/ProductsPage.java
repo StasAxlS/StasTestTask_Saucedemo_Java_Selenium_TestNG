@@ -11,6 +11,9 @@ public class ProductsPage extends BasePage {
     @FindBy(id = "add-to-cart-sauce-labs-backpack")
     private WebElement addCartLabsBackpack;
 
+    @FindBy(id = "add-to-cart-sauce-labs-bike-light")
+    private WebElement addCartLabsBikeLight;
+
     @FindBy(id = "remove-sauce-labs-backpack")
     private WebElement removeCartLabsBackpack;
 
@@ -35,8 +38,13 @@ public class ProductsPage extends BasePage {
         return this;
     }
 
+    public ProductsPage clickAddCartLabsBikeLightButton() {
+        addCartLabsBikeLight.click();
+        return this;
+    }
+
     public ProductsPage sortProductsPriceLowToHigh() {
-        Select dropdown = new Select(productSortDropdown);;
+        Select dropdown = new Select(productSortDropdown);
         dropdown.selectByVisibleText("Price (low to high)");
 
         return this;

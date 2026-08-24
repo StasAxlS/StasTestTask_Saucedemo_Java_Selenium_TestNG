@@ -24,6 +24,7 @@ public class CartTest extends BaseTest {
                 .enterPassword(pass)
                 .clickLoginButton()
                 .clickAddCartLabsBackpackButton()
+                .clickAddCartLabsBikeLightButton()
                 .clickShoppingCart()
                 .getItemNames();
 
