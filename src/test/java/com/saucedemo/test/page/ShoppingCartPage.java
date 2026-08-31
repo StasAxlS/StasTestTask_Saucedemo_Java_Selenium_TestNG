@@ -1,4 +1,4 @@
-package com.saucedemo.test.pege;
+package com.saucedemo.test.page;
 
 import com.saucedemo.test.model.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -10,13 +10,13 @@ import java.util.List;
 public class ShoppingCartPage extends BasePage {
 
     @FindBy(className = "inventory_item_name")
-    private List<WebElement> removeCartLabsBackpack;
+    private List<WebElement> inventoryItemName;
 
     public ShoppingCartPage(WebDriver driver) {
         super(driver);
     }
 
     public List<String> getItemNames() {
-        return removeCartLabsBackpack.stream().map(WebElement::getText).toList();
+        return inventoryItemName.stream().map(WebElement::getText).toList();
     }
 }
