@@ -1,7 +1,7 @@
 package com.saucedemo.test.tests;
 
 import com.saucedemo.test.base.BaseTest;
-import com.saucedemo.test.pege.AuthorizationPage;
+import com.saucedemo.test.page.AuthorizationPage;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;

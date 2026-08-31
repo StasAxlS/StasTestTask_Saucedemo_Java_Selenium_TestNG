@@ -8,7 +8,7 @@
 
     <test name="UI Tests">
         <packages>
-            <package name="com.saucedemoTest.tests"/>
+            <package name="com.saucedemo.test.tests"/>
         </packages>
     </test>
 </suite>

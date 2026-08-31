@@ -1,4 +1,4 @@
-package com.saucedemo.test.pege;
+package com.saucedemo.test.page;
 
 import com.saucedemo.test.model.BasePage;
 import org.openqa.selenium.WebDriver;
